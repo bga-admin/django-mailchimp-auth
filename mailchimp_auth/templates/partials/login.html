@@ -10,7 +10,7 @@
     <small>Subscription to our newsletter is required to view the databse after 3 searches. If you have unsubscribed from our newsletter, you can <a target="_blank" href="https://illinoisanswers.org/newsletters/">sign up again here</a> to regain access to our databases.</small>
 </p>
 
-<form class="form" id="login-form" method="POST" action="{% url 'salsa_auth:login' %}">
+<form class="form" id="login-form" method="POST" action="{% url 'mailchimp_auth:login' %}">
     {% csrf_token %}
     <input type="hidden" value="{{ request.get_full_path }}" name="next" />
     <div class="form-group">
